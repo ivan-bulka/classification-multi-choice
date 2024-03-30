@@ -46,6 +46,7 @@ class XGBTextClassifier:
                                        target_names=self.le.classes_)
         logging.info(report)
 
+
     def save_model(self, path: str) -> None:
         with open(path, 'wb') as file:
             pickle.dump(self.model, file)
